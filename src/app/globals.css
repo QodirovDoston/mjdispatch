@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  background-image: url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
