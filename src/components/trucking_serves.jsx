@@ -3,7 +3,7 @@ import FormSendMesage from "../components/FormSendMesage";
 
 const Trucking_serves = () => {
   return (
-    <div className="max-w-[85%] mx-auto">
+    <div id='serves' className="max-w-[85%] mx-auto">
       <div className="grid grid-cols-2 gap-32">
         {/* <div>
       <h1 className="text-center text-4xl my-5 font-semibold text-green-600">
@@ -73,7 +73,7 @@ const Trucking_serves = () => {
             We at M&J Dispatch, LLC are a small business whose mission is to
             help trucking companies take their company to the next level. Our
             focus is trucking companies who have less than 10 trucks who are in
-            need of finding freight at the best price. Our truck dispatchers
+            need of finding freight at the best price. Our <a className='text-green-700 cursor-pointer' href="#">truck dispatchers </a>
             know the business better than anyone and are experts at finding the
             highest paying load helping you make the money you deserve. Our team
             of highly trained dispatchers will take care of all the paperwork,

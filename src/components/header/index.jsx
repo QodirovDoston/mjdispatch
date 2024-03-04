@@ -28,7 +28,7 @@ const index = () => {
 { name: "CONTACT", link: "/" }
 ];
   return (
-    <div id="" className="bg-gray-100 ">
+    <div id="top" className="bg-gray-100 ">
       <div className="max-w-[85%] mx-auto py-6">
         <div class="flex">
           <a class="" href="#">

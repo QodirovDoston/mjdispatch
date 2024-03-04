@@ -76,6 +76,15 @@ const index = () => {
       <div className='w-[80%] mx-auto'>
         <p className="text-white text-md">© Copyright 2022 - All Rights Reserved</p>
     </div>
+
+    <a href="#top"   
+            className="scroll-to-top fixed bottom-2 right-6 
+                       bg-gray-800 text-white rounded-full 
+                       transition duration-300 hover:bg-gray-700 
+                       hover:text-gray-200">
+        <Image width={25} height={25} alt="hero" src="https://media.geeksforgeeks.org/wp-content/uploads/20240227155250/up.png"
+className="w-12 h-12 rounded-full bg-white" />
+  </a>
     </div>
     </>
   );
