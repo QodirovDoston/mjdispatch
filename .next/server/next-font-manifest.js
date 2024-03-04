@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/doston/Desktop/djnsd/mjdispatch/src/app/layout\":[\"static/media/cb0a9ee3a59e8bf7-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/doston/Desktop/mjdispatch/src/app/layout\":[\"static/media/cb0a9ee3a59e8bf7-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

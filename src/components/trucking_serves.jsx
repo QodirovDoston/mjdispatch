@@ -1,11 +1,11 @@
 import React from "react";
-import FormSendMesage from '../components/FormSendMesage'
+import FormSendMesage from "../components/FormSendMesage";
 
 const Trucking_serves = () => {
   return (
     <div className="max-w-[85%] mx-auto">
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="grid grid-cols-2 gap-32">
+        {/* <div>
       <h1 className="text-center text-4xl my-5 font-semibold text-green-600">
       Trucking Services
       </h1>
@@ -59,8 +59,38 @@ const Trucking_serves = () => {
         </div>
       </div>
       </div>
-      </div>
-      <FormSendMesage/>
+      </div> */}
+        {/* bu kerak boshqa page uchun */}
+
+        <div>
+          <h1 className="text-gray-600 text-3xl font-bold mt-12">
+            Professional Truck Dispatching
+          </h1>
+          <h2 className="text-gray-600 text-3xl font-bold my-10">
+            Dispatch Services, Training & Consulting Available!
+          </h2>
+          <p className="text-text-color mb-10">
+            We at M&J Dispatch, LLC are a small business whose mission is to
+            help trucking companies take their company to the next level. Our
+            focus is trucking companies who have less than 10 trucks who are in
+            need of finding freight at the best price. Our truck dispatchers
+            know the business better than anyone and are experts at finding the
+            highest paying load helping you make the money you deserve. Our team
+            of highly trained dispatchers will take care of all the paperwork,
+            phone calls and payments so all you have to do is DRIVE.
+          </p>
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/TT6hyiDgzZQ?si=Wuz0wGg6yd5JUJPt&amp;controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          />
+        </div>
+        <FormSendMesage />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-// File: /home/doston/Desktop/djnsd/mjdispatch/src/app/page.js
+// File: /home/doston/Desktop/mjdispatch/src/app/page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

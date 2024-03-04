@@ -32,13 +32,13 @@ const index = () => {
 
   return (
     <div>
-      <div className="px-20  shadow">
+      <div className="px-7 mt-20 shadow-2xl">
         {/* <Toaster richColors position="top-right" /> */}
         <h1 className="text-center text-4xl font-bold py-6 text-gray-700">
           Contact Us
         </h1>
         <p className="text-xl text-text-color">"*" indicates required fields</p>
-        <div className="px-1 py-3">
+        <div className="px-1 py-10">
           <Formik
             initialValues={{
               // firstName: '',
@@ -50,11 +50,11 @@ const index = () => {
             }}
             validationSchema={Yup.object(
               {
-                // firstName: Yup.string().required('Name is required'),
-                // lastName: Yup.string().required('Last name is required'),
-                // email: Yup.string().email('Invalid email address').required('Email is required'),
-                // visitors: Yup.string().required('Last visitors is required'),
-                // phone: Yup.string().required('Phone number is required'),
+                firstName: Yup.string().required('Name is required'),
+                lastName: Yup.string().required('Last name is required'),
+                email: Yup.string().email('Invalid email address').required('Email is required'),
+                visitors: Yup.string().required('Last visitors is required'),
+                phone: Yup.string().required('Phone number is required'),
               }
             )}
             onSubmit={handleSubmit}
@@ -63,7 +63,7 @@ const index = () => {
               <Form>
                 <div className="mb-4 ">
                 <label className="ms-2 text-sm font-bold text-text-color">
-                Name *  <br />
+                FirstName *  <br />
                   </label>
                   <Field
                     type="text"
@@ -75,6 +75,23 @@ const index = () => {
                   <ErrorMessage
                     className="text-[10px] text-red-600"
                     name="firstName"
+                    component="div"
+                  />
+                </div>
+                <div className="mb-4 ">
+                <label className="ms-2 text-sm font-bold text-text-color">
+                Last Name *  <br />
+                  </label>
+                  <Field
+                    type="text"
+                    className="border focus:caret-primary caret-green-300  text-gray-900 text-sm rounded-[4px] block w-full p-2.5"
+                    placeholder="Last Name"
+                    id="lastName"
+                    name="lastName"
+                  />
+                  <ErrorMessage
+                    className="text-[10px] text-red-600"
+                    name="lastName"
                     component="div"
                   />
                 </div>

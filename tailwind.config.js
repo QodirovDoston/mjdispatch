@@ -32,7 +32,7 @@ module.exports = {
         'primary': '#049444',
         'primary-dark': '#890606',
         'transparent': 'rgba(255, 255, 255, 0)',
-        'text-color': '#595959',
+        'text-color': '#0B2D96',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

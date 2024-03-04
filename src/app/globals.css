@@ -13,3 +13,8 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
+.footer{
+  background-image:url("https://mjdispatch.com/wp-content/uploads/2022/02/MJDispatch-images-footer.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
