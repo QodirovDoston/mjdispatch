@@ -5,8 +5,6 @@ import locationIcon from "../../assets/icons/location.svg";
 import phoneIcon from "../../assets/icons/phone.svg";
 import emailIcon from "../../assets/icons/email.svg";
 
-
-
 const index = () => {
   const footerlink = [
     { name: "Dispatching", link: "#" },
@@ -19,7 +17,7 @@ const index = () => {
   return (
     <>
     <div className="footer">
-      <div className="grid grid-cols-4 w-[80%] mx-auto py-6 gap-4">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-[80%] mx-auto py-6 gap-4">
         <div>
           <Image
             width={350}

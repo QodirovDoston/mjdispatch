@@ -10,7 +10,7 @@ const DispatchServices = () => {
         We save you time and make you money with our Truck Dispatch Services m&j
         content.
       </h1>
-      <div className="grid grid-cols-2">
+      <div className="grid xl:grid-cols-2 grid-cols-1">
         <div>
         <p className="text-text-color">
           We are the best in the industry at negotiating the highest paying

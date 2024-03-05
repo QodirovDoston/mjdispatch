@@ -17,7 +17,7 @@ const types_for_Truck = () => {
         We service the following trailer types for Truck Dispatch:
       </h1>
       
-      <div className="flex justify-between px-12 flex-wrap py-4">
+      <div className="flex 2x:justify-between justify-center xl:px-12 px-5 flex-wrap py-4">
         {catalog.map((item, idx)=>{
         return(
         <div key={idx} className="cursor-pointer">

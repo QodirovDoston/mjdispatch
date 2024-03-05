@@ -4,7 +4,7 @@ import FormSendMesage from "../components/FormSendMesage";
 const Trucking_serves = () => {
   return (
     <div id='serves' className="max-w-[85%] mx-auto">
-      <div className="grid grid-cols-2 gap-32">
+      <div className="grid xl:grid-cols-2 grid-cols-1 gap-32">
         {/* <div>
       <h1 className="text-center text-4xl my-5 font-semibold text-green-600">
       Trucking Services
@@ -81,8 +81,7 @@ const Trucking_serves = () => {
           </p>
 
           <iframe
-            width="560"
-            height="315"
+            style={{width:'100%', height:'100%' ,maxHeight:'350px', marginTop:'30px'}}
             src="https://www.youtube.com/embed/TT6hyiDgzZQ?si=Wuz0wGg6yd5JUJPt&amp;controls=0"
             title="YouTube video player"
             frameborder="0"
