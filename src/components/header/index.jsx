@@ -35,8 +35,8 @@ const index = () => {
   return (
     <div id="top" className="bg-gray-100 ">
       <div className="max-w-[85%] mx-auto py-6">
-        <div class="flex">
-          <a class="" href="#">
+        <div className="flex flex-wrap">
+          <a className="" href="#">
             <Image
               width={350}
               height={350}
@@ -44,14 +44,13 @@ const index = () => {
               src="https://mjdispatch.com/wp-content/uploads/2023/03/MJ-Logo-2x-400x1241-1.png"
             />
           </a>
-
           <div>
-            <div className="flex justify-between xl:gap-32 gap-12">
+            <div className="md:flex hidden justify-between flex-wrap gap-28">
               <div className="">
                 <div className="px-3">
                   <a className="text-text-color font-hairline text-lg" href="">
-                    Have A Question?
-                  </a>
+                    Have A Question?                                                                                                        
+                  </a>                                                                                                                                                                                                                                      
                 </div>
                 <div className="mt-4 px-4">
                   <a className="text-green-700 font-hairline text-xl" href="">
@@ -72,9 +71,8 @@ const index = () => {
                   </a>
                 </div>
               </div>
-              <div className="">
-                <div
-                  className="mb-1 bg-primary py-2 px-6 text-lg hover:bg-text-color duration-700 text-white rounded-2xl text-center">
+              <div className="xl:block flex">
+                <div className="mb-1 bg-primary py-2 px-6 text-lg hover:bg-text-color duration-700 text-white rounded-2xl text-center">
                   <a className="" href="tel:18888347728">
                     New Carrier Form
                   </a>
@@ -88,10 +86,9 @@ const index = () => {
             <hr class="h-[1px] my-1 bg-primary border-0"/>
           </div>
         </div>
-        <ul className="flex justify-end gap-20 pt-4">
-          {links.map((item, idx) => (
-            <li className='flex item-center' key={idx} onMouseEnter={() => setActiveIndex(idx)}
-                onMouseLeave={() => setActiveIndex(null)}>
+        <ul className="flex xl:justify-end justify-center flex-wrap xl:gap-20 gap-8 pt-4">
+          {links.map((item,idx) => (
+            <li className='flex item-center' key={idx} onMouseEnter={() => setActiveIndex(idx)} onMouseLeave={() => setActiveIndex(null)}>
               <a
                 className={`text-text-color hover:text-primary font-bold ${activeIndex === idx ? 'active' : ''}`}
                 href={item.link}
@@ -99,8 +96,7 @@ const index = () => {
                 {item.name}
               </a>
               {activeIndex === idx && item.dropDownData && (
-                <div className="absolute bg-white shadow-md mt-6 w-max" onMouseEnter={() => setActiveIndex(idx)}
-                     onMouseLeave={() => setActiveIndex(null)}>
+                <div className="absolute bg-white shadow-md mt-6" onMouseEnter={() => setActiveIndex(idx)} onMouseLeave={() => setActiveIndex(null)}>
                   {item.dropDownData.map((dropItem, dropIdx) => (
                     <div>
                       <Link key={dropIdx} href={dropItem.value}
@@ -112,8 +108,7 @@ const index = () => {
                   ))}
                 </div>
               )}
-              {(item.name === "ABOUT US" || item.name === "SERVICES") && ( // Faqatgina "ABOUT US" yoki "SERVICES" maydonlari uchun arrow_bottom ni chiqarish shart qilinadi
-                <Image src={arrow_bottom} alt="arrow" width={20} height={20}/>
+               {(item.name === "ABOUT US" || item.name === "SERVICES") && (<Image src={arrow_bottom} alt="arrow" width={20} height={20}/>
               )}
             </li>
           ))}

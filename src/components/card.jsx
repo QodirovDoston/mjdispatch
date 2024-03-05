@@ -1,21 +1,28 @@
-import Image from 'next/image'
-import React from 'react'
+import React from "react";
 
 const Card = () => {
   return (
     <div class="relative m-16">
-        <button class="absolute py-1 px-3 -left-8 -top-2 -rotate-[10deg] border border-black black_border bg-[#7e22ce] text-white font-bold">
-        WARNING!
-    </button>
-        <div class="purple_border p-8 border border-black bg-white">
-            The
-            <span class="font-mono text-purple-700 font-bold">message</span>
-            variable is a Laravel reserved word
-            within this email context,
-            so you should avoid using that as a field handle if you intend on using the email feature.
-        </div>
+      <button class="absolute py-1 px-3 -left-8 -top-2 -rotate-[10deg] border border-black black_border bg-green-700 text-white font-bold">
+        NEW
+      </button>
+      <div class="purple_border p-8 border border-black text-center bg-white">
+        <h1 className="text-text-color text-2xl"> No Contract</h1>
+        <span class="font-mono text-text-color text-xl font-bold">
+          Pricing Plans
+        </span>
+        <p className="text-text-color text-md">
+          We understand that finding a great OTR dispatcher is not an easy task.
+          We offer NO CONTRACT pricing because we are 100% confident that you
+          are going to love our services. You are more than just a driver, you
+          are family!
+        </p>
+        <button className="text-white rounded-[22px] mt-5 bg-green-700 duration-150 transition hover:bg-primary-dark font-medium text-lg px-10 py-2.5 text-center">
+        Submit
+      </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -28,7 +28,7 @@ const DispatchServices = () => {
             />
             </div>
         <div className="">
-          <div className="max-w-screen-xl mx-auto px-5 min-h-sceen">
+          <div className="max-w-screen-xl mx-auto xl:px-5 px-1 min-h-sceen xl:mt-1 mt-32">
             <div className="grid  max-w-xl mx-auto mt-1">
               {accardion.map((item, index)=>{
               return(

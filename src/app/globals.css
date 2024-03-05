@@ -58,17 +58,15 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
-
-.call {
-  background-image: url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
+.call{
+  background-image: linear-gradient(0deg, rgba(160,160,160,0.8806372890953256) 2%, rgba(90,92,93,0) 100%), url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
   background-repeat: no-repeat;
   object-fit: cover;
 }
-
-
-.text {
-  text-shadow: 2px 2px 0 #000,
-  -2px 2px 0 #000,
-  -2px -2px 0 #000,
-  2px -2px 0 #000;
+.text{
+    text-shadow:
+      2px 2px 0 #000,
+      -2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000;
 }

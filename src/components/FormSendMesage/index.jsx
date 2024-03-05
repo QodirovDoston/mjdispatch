@@ -32,7 +32,7 @@ const index = () => {
 
   return (
     <div>
-      <div className="px-7 mt-20 shadow-2xl">
+      <div className="px-7 mt-20 shadow-2xl overflow-hidden">
         {/* <Toaster richColors position="top-right" /> */}
         <h1 className="text-center text-4xl font-bold py-6 text-gray-700">
           Contact Us
@@ -137,7 +137,7 @@ const index = () => {
                   </Field>
                   <div className="my-4 ">
                   <label className="ms-2 text-sm font-bold text-text-color">
-                    Email Me Future Opportunities <br />
+                  Message* <br />
                   </label>
                     <Field
                     as="textarea"
@@ -159,7 +159,7 @@ const index = () => {
                 CAPTCHA <br />
                   </label>
                   <ReCAPTCHA
-                  className='w-full'
+                  className='max-w-[200px]'
                     sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     onChange={onChange}
                   />
