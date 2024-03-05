@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .container {
+    @apply w-full max-w-[1470px] px-3 sm:px-4 mx-auto;
+  }
+}
+
 .home {
   background-image: url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
   background-repeat: no-repeat;
   object-fit: cover;
 }
 
-.truck_serves{
+.truck_serves {
   background-image: url("https://mjdispatch.com/wp-content/uploads/2022/03/image-3-600x600.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
 }
-.footer{
-  background-image:url("https://mjdispatch.com/wp-content/uploads/2022/02/MJDispatch-images-footer.jpg");
+
+.footer {
+  background-image: url("https://mjdispatch.com/wp-content/uploads/2022/02/MJDispatch-images-footer.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
 }
 
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  }
+}
 
-  
+
 .go-top {
   position: fixed;
   bottom: 20px;
@@ -42,26 +49,26 @@
 }
 
 
-.path{
+.path {
   clip-path: polygon(50% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
 }
 
-.callus{
+.callus {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(4, 148, 68) 100%), url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
   background-repeat: no-repeat;
   object-fit: cover;
 }
-.call{
+
+.call {
   background-image: url("https://mjdispatch.com/wp-content/uploads/2023/03/MJDispatch-images1right1.webp");
   background-repeat: no-repeat;
   object-fit: cover;
 }
 
 
-.text{
-    text-shadow:
-      2px 2px 0 #000,
-      -2px 2px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000;
+.text {
+  text-shadow: 2px 2px 0 #000,
+  -2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000;
 }
