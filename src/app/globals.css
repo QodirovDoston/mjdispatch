@@ -40,3 +40,8 @@
   opacity: 0;
   z-index: 2;
 }
+
+
+.path{
+  clip-path: polygon(50% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
+}
