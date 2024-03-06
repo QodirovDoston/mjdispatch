@@ -5,7 +5,7 @@ import { accardion } from '../utils/index';
 const DispatchServices = () => {
   return (
     <div className="bg-gray-100 pb-8 pt-16 path">
-    <div className="w-[80%] mx-auto">
+    <div className="xl:w-[80%] w-[95%] mx-auto">
       <h1 className="text-gray-600 text-3xl text-center font-bold mt-12">
         We save you time and make you money with our Truck Dispatch Services m&j
         content.
@@ -28,8 +28,8 @@ const DispatchServices = () => {
             />
             </div>
         <div className="">
-          <div className="max-w-screen-xl mx-auto xl:px-5 px-1 min-h-sceen xl:mt-1 mt-32">
-            <div className="grid  max-w-xl mx-auto mt-1">
+          <div className="max-w-screen-xl mx-auto xl:px-5 px-1 min-h-sceen xl:mt-1 md:mt-32 mt-56">
+            <div className="grid max-w-xl mx-auto mt-1">
               {accardion.map((item, index)=>{
               return(
               <div key={index} className="py-[3px]">

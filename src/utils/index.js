@@ -45,3 +45,39 @@ export const accardion = [
       "Your dispatcher is very well connected within the industry. Need Factoring? Need a fuel card? Need insurance? Need Compliance? We got you covered!"
   }
 ];
+
+export const sikkl = [
+  {
+    title: "High Paying Loads",
+    paragrow:
+      "Your personal dispatcher is an expert in their field that can skillfully negotiate the best rates for you on the best loads."
+  },
+  {
+    title: "Back Office Support",
+    paragrow:
+      "Our dispatchers complete all necessary paperwork including credit checks, carrier packet set-up, rate confirmations, invoicing and check calls."
+  },
+  {
+    title: "Get Paid Fast",
+    paragrow:
+      "We partner with your factoring company to offer invoicing and timely payments & help you to find a reliable factoring company."
+  }
+];
+
+export const aboutUs = [
+  {
+    title: "Matt, CEO & Owner",
+    paragrow:
+      "Your personal dispatcher is an expert in their field that can skillfully negotiate the best rates for you on the best loads."
+  },
+  {
+    title: "Nicole, Senior Dispatcher",
+    paragrow:
+      "She has excellent customer service skills, is available around the clock."
+  },
+  {
+    title: "Debbie, Office Support",
+    paragrow:
+      "She is the newest team member at M&J specializing in back office support."
+  }
+];

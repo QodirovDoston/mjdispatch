@@ -3,7 +3,7 @@ import React from "react";
 const index = () => {
   return (
     <div className="home">
-      <div className="w-[80%] mx-auto py-28">
+      <div className="xl:w-[80%] w-[95%] mx-auto py-28">
         <h1 className="text-white xl:text-5xl text-3xl font-bold flex jus">
           Truck Dispatching & Freight Dispatching Services
         </h1>

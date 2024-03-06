@@ -17,7 +17,7 @@ const index = () => {
   return (
     <>
     <div className="footer">
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-[80%] mx-auto py-6 gap-4">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:w-[80%] w-[90%] mx-auto py-6 gap-4">
         <div>
           <Image
             width={350}
@@ -44,9 +44,8 @@ const index = () => {
         </div>
         <div>
           <iframe
+           style={{width:'100%', height:'100%' ,maxHeight:'350px'}}
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12199.99001236602!2d67.8212104!3d40.14233935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1709541914504!5m2!1sru!2s"
-            width="250"
-            height="200"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -74,7 +73,6 @@ const index = () => {
       <div className='w-[80%] mx-auto'>
         <p className="text-white text-md">© Copyright 2022 - All Rights Reserved</p>
     </div>
-
     <a href="#top"   
             className="scroll-to-top fixed bottom-2 right-6 
                        bg-gray-800 text-white rounded-full 

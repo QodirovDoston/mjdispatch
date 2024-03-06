@@ -45,7 +45,7 @@ const index = () => {
             />
           </a>
           <div>
-            <div className="md:flex hidden justify-between flex-wrap gap-28">
+            <div className="md:flex hidden justify-between flex-wrap xl:gap-28 gap-8">
               <div className="">
                 <div className="px-3">
                   <a className="text-text-color font-hairline text-lg" href="">

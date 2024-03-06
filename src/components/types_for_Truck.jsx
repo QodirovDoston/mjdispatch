@@ -12,13 +12,12 @@ const types_for_Truck = () => {
     ]
 
   return (
-    <div className="py-20">
+    <div className="xl:py-20 py-5">
       <h1 className="text-center text-3xl text-gray-400 mb-12">
         We service the following trailer types for Truck Dispatch:
       </h1>
-      
-      <div className="flex 2x:justify-between justify-center xl:px-12 px-5 flex-wrap py-4">
-        {catalog.map((item, idx)=>{
+      <div className="flex 2x:justify-between justify-center xl:px-12 lg:px-5 px-2 flex-wrap py-4">
+        {catalog.map((item, idx)=>{ 
         return(
         <div key={idx} className="cursor-pointer">
           <Image
@@ -32,7 +31,7 @@ const types_for_Truck = () => {
             )
           })}
      </div>
-      <div className="w-[80%] mx-auto text-center">
+      <div className="xl:w-[80%] w-[90%] mx-auto text-center">
         <p className="text-center text-md text-text-color">
           At M&J Dispatch, LLC we specialize in giving trucking companies a
           competitive edge. We understand the need for specialized attention and
