@@ -13,28 +13,22 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
-
 .truck_serves {
   background-image: url("https://mjdispatch.com/wp-content/uploads/2022/03/image-3-600x600.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
 }
-
 .footer {
   background-image: url("https://mjdispatch.com/wp-content/uploads/2022/02/MJDispatch-images-footer.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
 }
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
-
 .go-top {
   position: fixed;
   bottom: 20px;
@@ -47,8 +41,6 @@
   opacity: 0;
   z-index: 2;
 }
-
-
 .path {
   clip-path: polygon(50% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
 }
