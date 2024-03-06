@@ -11,8 +11,8 @@ const index = () => {
     {name: "HOME", link: "/"},
     {
       name: "ABOUT US", link: "/", dropDownData: [
-        {text: "PARTNERS", value: "#"},
-        {text: "TESTIMONIALS", value: "3"}
+        {text: "PARTNERS", value: "/partners"},
+        {text: "TESTIMONIALS", value: "/testimonials"}
       ]
     },
     {
@@ -89,12 +89,12 @@ const index = () => {
         <ul className="flex xl:justify-end justify-center flex-wrap xl:gap-20 gap-8 pt-4">
           {links.map((item,idx) => (
             <li className='flex item-center' key={idx} onMouseEnter={() => setActiveIndex(idx)} onMouseLeave={() => setActiveIndex(null)}>
-              <a
+              <Link
                 className={`text-text-color hover:text-primary font-bold ${activeIndex === idx ? 'active' : ''}`}
                 href={item.link}
               >
                 {item.name}
-              </a>
+              </Link>
               {activeIndex === idx && item.dropDownData && (
                 <div className="absolute bg-white shadow-md mt-6" onMouseEnter={() => setActiveIndex(idx)} onMouseLeave={() => setActiveIndex(null)}>
                   {item.dropDownData.map((dropItem, dropIdx) => (
