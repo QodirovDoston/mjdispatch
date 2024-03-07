@@ -38,7 +38,7 @@ const index = () => {
           Contact Us
         </h1>
         <p className="text-xl text-text-color">"*" indicates required fields</p>
-        <div className="px-1 py-10">
+        <div className="px-1 py-8">
           <Formik
             initialValues={{
               // firstName: '',
@@ -61,7 +61,8 @@ const index = () => {
           >
             {({ isSubmitting }) =>
               <Form>
-                <div className="mb-4 ">
+                <div className='grid grid-cols-2 xl:grid-cols-1 gap-4'>
+                <div className="">
                 <label className="ms-2 text-sm font-bold text-text-color">
                 FirstName *  <br />
                   </label>
@@ -78,7 +79,7 @@ const index = () => {
                     component="div"
                   />
                 </div>
-                <div className="mb-4 ">
+                <div className=" mb-4">
                 <label className="ms-2 text-sm font-bold text-text-color">
                 Last Name *  <br />
                   </label>
@@ -95,7 +96,9 @@ const index = () => {
                     component="div"
                   />
                 </div>
-                <div className="mb-4">
+                </div>
+                <div className='grid grid-cols-2 xl:grid-cols-1 gap-4'>
+                <div className="">
                   <label className="ms-2 text-sm font-bold text-text-color">
                     Email *  <br />
                   </label>
@@ -112,7 +115,7 @@ const index = () => {
                     component="div"
                   />
                 </div>
-                <div className="mb-4 ">
+                <div >
                 <label className="ms-2 text-sm font-bold text-text-color">
                 Phone Number* <br />
                   </label>
@@ -121,7 +124,7 @@ const index = () => {
                       <div>
                         <PhoneInput
                           defaultCountry="US"
-                          className="px-2 py-3 border border-gray-300 focus:bg-white text-gray-900 text-sm rounded-[4px]"
+                          className="px-2 py-2.5 border border-gray-300 focus:bg-white text-gray-900 text-sm rounded-[4px]"
                           {...field}
                           placeholder="Enter phone number"
                           onChange={value =>
@@ -135,6 +138,8 @@ const index = () => {
                         />
                       </div>}
                   </Field>
+                </div>
+                </div>
                   <div className="my-4 ">
                   <label className="ms-2 text-sm font-bold text-text-color">
                   Message* <br />
@@ -153,8 +158,7 @@ const index = () => {
                       component="div"
                     />
                   </div>
-                </div>
-                <div className="my-3">
+                {/* <div className="my-3">
                 <label className="ms-2 text-sm font-bold text-text-color">
                 CAPTCHA <br />
                   </label>
@@ -163,7 +167,7 @@ const index = () => {
                     sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     onChange={onChange}
                   />
-                </div>  
+                </div>   */}
                 <button
                   type="submit"
                   disabled={isSubmitting}

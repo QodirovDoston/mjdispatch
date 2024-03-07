@@ -1,5 +1,6 @@
 import { Arvo, Inter } from "next/font/google";
 import "./globals.css";
+
 import BaseLayout from "../components/base-layout";
 
 // const inter = Inter({ subsets: ["latin"] });
