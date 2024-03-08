@@ -1,7 +1,6 @@
 import React from "react";
 import { accardion } from '../utils/index';
 
-
 const DispatchServices = () => {
   return (
     <div className="bg-gray-100 pb-8 pt-16 path">

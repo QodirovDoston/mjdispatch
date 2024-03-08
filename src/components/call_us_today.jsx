@@ -4,7 +4,6 @@ import note from "../assets/icons/note.svg";
 import partner from "../assets/icons/partner.svg";
 import flag from "../assets/icons/flag.svg";
 
-
 import Image from "next/image";
 import Card from "./card";
 import { sikkl } from "../utils";
