@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactInfo = () => {
   return (
-    <div className="item2 xl:row-span-2 col-span-1 row-span-2 mt-5">
+    <div className="item2 xl:row-span-2 col-span-1 xl:text-start text-center row-span-2 mt-5">
       <p className="text-2xl font-bold">Contact Info</p>
       <p className="text-sm text-text-color py-4">
         17 N. Vandalia St. Brazil, In 47834

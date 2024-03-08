@@ -13,13 +13,6 @@ const DruckDispatch = () => {
         above and beyond to help you meet your business goals. Give us a try, we
         promise you will be glad you did.
       </p>
-      {/* <ButtonCom
-        link="tel:+998933213940"
-        text="SIGN UP TODAY!"
-        // icon={calendaCheck}
-        addStyle='bg-green-700'
-      /> */}
-
       <a href="" className="flex justify-center">
         <button
           className={`text-white rounded-[22px] border-2 flex gap-2 bg-green-700 duration-150 transition hover:border-green-700 hover:text-green-700  font-medium text-lg  px-5 py-2.5 text-center`}

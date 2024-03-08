@@ -18,19 +18,19 @@ const index = () => {
     {
       name: "SERVICES", link: "/", dropDownData: [
         {text: "DISPATCH SERVICES", value: "/dispatch-services"},
-        {text: "TRUCKS SERVICED", value: "#"},
-        {text: "BUSINESS CONSULTING", value: "#"},
-        {text: "DISPATCH TRAINING", value: "#"},
-        {text: "BROKER PACKETS", value: "#"},
-        {text: "FACTORING", value: "#"},
-        {text: "INSURANCE", value: "#"},
+        {text: "TRUCKS SERVICED", value: "/equipment-dispatch"},
+        {text: "BUSINESS CONSULTING", value: "/trucking-consulting"},
+        {text: "DISPATCH TRAINING", value: "/truck-dispatch-training"},
+        {text: "BROKER PACKETS", value: "/broker-contact-form"},
+        {text: "FACTORING", value: "/factoring-company"},
+        {text: "INSURANCE", value: "/commercial-cruck-cnsurance-company"},
 
       ]
     },
-    {name: "TRAILER LEASES", link: "/"},
-    {name: "FAQ", link: "/"},
-    {name: "BLOG", link: "/"},
-    {name: "CONTACT", link: "/"}
+    {name: "TRAILER LEASES", link: "/trailer-leases"},
+    {name: "FAQ", link: "/faq"},
+    {name: "BLOG", link: "/blog"},
+    {name: "CONTACT", link: "/contact-us"}
   ];
   return (
     <div id="top" className="bg-gray-100 ">
