@@ -88,9 +88,7 @@ const PriceCard = () => {
                               clip-rule="evenodd"
                             />
                           </svg>
-                          <span>
-                            {el}
-                          </span>
+                          <span>{el}</span>
                         </li>
                       );
                     })}

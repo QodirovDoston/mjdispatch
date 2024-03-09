@@ -61,7 +61,7 @@ const index = () => {
           >
             {({ isSubmitting }) =>
               <Form>
-                <div className='grid grid-cols-2 xl:grid-cols-1 gap-4'>
+                <div className='grid xl:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
                 <div className="">
                 <label className="ms-2 text-sm font-bold text-text-color">
                 FirstName *  <br />
@@ -97,7 +97,7 @@ const index = () => {
                   />
                 </div>
                 </div>
-                <div className='grid grid-cols-2 xl:grid-cols-1 gap-4'>
+                <div className='grid xl:grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-4'>
                 <div className="">
                   <label className="ms-2 text-sm font-bold text-text-color">
                     Email *  <br />

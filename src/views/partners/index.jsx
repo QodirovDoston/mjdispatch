@@ -1,38 +1,56 @@
+"use client";
 import Image from "next/image";
 import React from "react";
-import Insurance from '../../components/Insurance';
+import Insurance from "../../components/Insurance";
 import phoneIcon from "../../assets/icons/phone.svg";
+import CaruselAbsolute from "../../components/caruselabsolute";
+import { caruselBlogFordata } from "../../utils";
 
 const PartnersPage = () => {
- const img = ["https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png","https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png"]
+  const img = [
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png",
+    "https://mjdispatch.com/wp-content/uploads/2022/12/EM-Motive-Transitional-w750px.png"
+  ];
   return (
     <>
-    <div className="home">
-      <div className="xl:w-[80%] w-[95%] mx-auto py-28">
-        <h1 className="text-white xl:text-5xl text-3xl font-bold flex jus">
-        Partners
-        </h1>
+      <div className="home">
+        <div className="xl:w-[80%] w-[95%] mx-auto py-28">
+          <h1 className="text-white xl:text-5xl text-3xl font-bold flex jus">
+            Partners
+          </h1>
+        </div>
       </div>
-    </div>
-    <div className='xl:w-[80%] w-[95%] mx-auto'>
-<h1 className='text-green-700 text-3xl text-center font-bold my-10'>Companies We Endorse</h1>
-<p className='text-xl text-text-color'>We have an extensive list of reputable partners that will help meet all your trucking needs. Give us a call today so we can direct you to the right path.</p>
-<div className="flex justify-between flex-wrap gap-4 my-8">
-  {img.map((item, idx)=>{
-  return(
-<Image
-key={idx}
-className="border border-gray-500 p-3 rounded-xl"
-width={250}
-height={250}
-alt='hero img'
-src={item}
-/>
-)
-})}
-</div>
-    </div>
-    <div className="callus">
+      <div className="xl:w-[80%] w-[95%] mx-auto">
+        <h1 className="text-green-700 text-3xl text-center font-bold my-10">
+          Companies We Endorse
+        </h1>
+        <p className="text-xl text-text-color">
+          We have an extensive list of reputable partners that will help meet
+          all your trucking needs. Give us a call today so we can direct you to
+          the right path.
+        </p>
+        <div className="flex justify-between flex-wrap gap-4 my-8">
+          {img.map((item, idx) => {
+            return (
+              <Image
+                key={idx}
+                className="border border-gray-500 p-3 rounded-xl"
+                width={250}
+                height={250}
+                alt="hero img"
+                src={item}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="callus">
         <div className="xl:w-[80%] w-[95%] mx-auto">
           <div className="flex justify-between flex-wrap py-8">
             <div>
@@ -51,7 +69,8 @@ src={item}
           </div>
         </div>
       </div>
-<Insurance/>
+      <CaruselAbsolute data={caruselBlogFordata} />
+      <Insurance />
     </>
   );
 };

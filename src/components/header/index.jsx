@@ -3,10 +3,11 @@ import Image from 'next/image';
 import React, {useState} from 'react'
 import arrow_bottom from '../../assets/icons/arrow-bottom.svg'
 import Link from "next/link";
-
+import { useParams } from 'next/navigation';
 const index = () => {
+  
   const [activeIndex, setActiveIndex] = useState(null);
-
+  const {id } = useParams()
   const links = [
     {name: "HOME", link: "/"},
     {
@@ -34,12 +35,13 @@ const index = () => {
   ];
   return (
     <div id="top" className="bg-gray-100 ">
-      <div className="max-w-[85%] mx-auto py-6">
+      <div className="xl:w-[85%] w-[95%] mx-auto py-6">
         <div className="flex flex-wrap">
           <a className="" href="#">
             <Image
-              width={350}
-              height={350}
+            className='xl:w-[250px] w-[250px]'
+              width={100%}
+              height={100%}
               alt='hero img'
               src="https://mjdispatch.com/wp-content/uploads/2023/03/MJ-Logo-2x-400x1241-1.png"
             />
@@ -90,7 +92,10 @@ const index = () => {
           {links.map((item,idx) => (
             <li className='flex item-center' key={idx} onMouseEnter={() => setActiveIndex(idx)} onMouseLeave={() => setActiveIndex(null)}>
               <Link
-                className={`text-text-color hover:text-primary font-bold ${activeIndex === idx ? 'active' : ''}`}
+              
+                className={`text-text-color hover:text-primary font-bold ${item.link === `/${id}` ? 'active text-green-700' : ''}`}
+                // className={`text-text-color hover:text-primary font-bold ${item.value === id ? 'active text-green-700' : ''}`}
+
                 href={item.link}
               >
                 {item.name}

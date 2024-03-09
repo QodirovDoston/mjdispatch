@@ -3,7 +3,6 @@ import React from "react";
 
 const LatestNews = () => {
 
-    const imgas= ["https://mjdispatch.com/wp-content/uploads/2023/07/pexels-tima-miroshnichenko-61696681-700x441.png"]
   const news = [
     {
       title:
@@ -21,10 +20,10 @@ const LatestNews = () => {
   ];
   return (
     <div className='coverBg'>
-    <div className="w-[80%] py-5 mx-auto">
+    <div className="xl:w-[80%] w-[90%] py-5 mx-auto">
       <div className="m-2 flex justify-center">
         <div className="clip_custom pt-10 pb-20 px-5 bg-gray-100 border rounded-lg border-gray-200 shadow-2xl">
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap">
             {news.map((item, idx) => {
               return (
                 <div key={idx} className="px-6 w-full text-center">
@@ -52,7 +51,7 @@ const LatestNews = () => {
             })}
           </div>
           <a className='flex justify-center' href="tel:+998500033940">
-          <button className="text-white rounded-[22px] bg-green-700 duration-150 transition hover:bg-primary-dark font-medium text-lg px-32 py-2.5 text-center">
+          <button className="text-white rounded-[22px] bg-green-700 duration-150 transition hover:bg-primary-dark font-medium text-lg px-32 py-2.5 text-center xl:mt-1 mb-12">
           Learn more
         </button>
           </a>

@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 const data = [
   {
@@ -47,6 +47,7 @@ const data = [
 ];
 
 function SampleNextArrow(props) {
+  
     const { className, style, onClick } = props;
     return (
       <div

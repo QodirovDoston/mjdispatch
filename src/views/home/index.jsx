@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Section1 from '../../components/Section1'
 import Trucking_serves from '../../components/trucking_serves'
@@ -8,6 +9,8 @@ import OurTeam from '../../components/our_team';
 import LatestNews from '../../components/latest_news';
 import Insurance from '../../components/Insurance';
 
+import CaruselAbsolute from '../../components/caruselabsolute';
+import { caruselBlogFordata } from '../../utils';
 
 export const HomePage = () => {
     return (
@@ -18,6 +21,7 @@ export const HomePage = () => {
            <Dispatch_Services/>
            <CallUsToday/>
            <OurTeam/>
+            <CaruselAbsolute data={caruselBlogFordata}/>
            <LatestNews/>
            <Insurance/>
         </div>
