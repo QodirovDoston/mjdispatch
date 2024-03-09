@@ -35,19 +35,19 @@ const index = () => {
   ];
   return (
     <div id="top" className="bg-gray-100 ">
-      <div className="xl:w-[85%] w-[95%] mx-auto py-6">
-        <div className="flex flex-wrap">
+      <div className="xl:w-[90%] w-[95%] mx-auto py-6">
+        <div className="flex ">
           <a className="" href="#">
             <Image
-            className='xl:w-[250px] w-[250px]'
-              width={100%}
-              height={100%}
+            className='xl:w-[350px] w-[250px]'
+              width={300}
+              height={350}
               alt='hero img'
               src="https://mjdispatch.com/wp-content/uploads/2023/03/MJ-Logo-2x-400x1241-1.png"
             />
           </a>
           <div>
-            <div className="md:flex hidden justify-between flex-wrap xl:gap-28 gap-8">
+            <div className="xl:flex md:block hidden justify-between xl:gap-28 gap-8">
               <div className="">
                 <div className="px-3">
                   <a className="text-text-color font-hairline text-lg" href="">
