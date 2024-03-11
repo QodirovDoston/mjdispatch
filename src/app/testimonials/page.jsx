@@ -1,6 +1,6 @@
 import TestimonialsPage from '../../views/testimonials/index';
 
-export default function DispatchServices() {
+export default function Testimonials() {
   return (
     <TestimonialsPage/>
   )

@@ -13,7 +13,7 @@ const OurTeam = () => {
           dedication to <br /> our clients. M&J Dispatch Consulting & Training is here
           to exceed your expectations!
         </p>
-        <button className="text-white rounded-[22px] bg-green-700 duration-150 transition hover:bg-primary-dark font-medium text-lg px-32 py-2.5 text-center">
+        <button className="text-white rounded-[22px] bg-green-700 duration-150 transition hover:bg-primary-dark font-medium text-lg xl:px-32 px-12 py-2.5 text-center">
           Learn more
         </button>
       </div>

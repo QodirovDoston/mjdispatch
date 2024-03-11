@@ -19,7 +19,7 @@ const TruckingConsultingPage = () => {
       <div className="xl:w-[85%] w-[95%] mx-auto py-12">
       <div className="grid xl:grid-cols-3 grid-cols-1  xl:gap-5 gap-0">
         <div className="item1 xl:col-span-2 col-span-2 row-span-1 ">
-          <div className=' shadow-xl border border-gray-300 p-4'>
+          <div className='shadow-xl border border-gray-300 p-4'>
           <h1 className="text-green-700 text-4xl">Dispatch Consulting</h1>
           <p className="text-text-color py-10 leading-100">
             Let us help you establish a new business or strengthen a current

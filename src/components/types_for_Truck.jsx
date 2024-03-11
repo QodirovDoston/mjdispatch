@@ -13,7 +13,7 @@ const types_for_Truck = () => {
 
   return (
     <div className="xl:py-20 py-5">
-      <h1 className="text-center text-3xl text-gray-400 mb-12">
+      <h1 className="text-center text-3xl text-gray-400 mb-12 mt-10">
         We service the following trailer types for Truck Dispatch:
       </h1>
       <div className="flex 2x:justify-between justify-center xl:px-12 lg:px-5 px-2 flex-wrap py-4">

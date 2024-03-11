@@ -1,5 +1,6 @@
 import React from "react";
 import { accardion } from '../utils/index';
+import Dropdown from './Dropdown';
 
 const DispatchServices = () => {
   return (
@@ -28,7 +29,7 @@ const DispatchServices = () => {
             </div>
         <div className="">
           <div className="max-w-screen-xl mx-auto xl:px-5 px-1 min-h-sceen xl:mt-1 md:mt-32 mt-56">
-            <div className="grid max-w-xl mx-auto mt-1">
+            {/* <div className="grid max-w-xl mx-auto mt-1">
               {accardion.map((item, index)=>{
               return(
               <div key={index} className="py-[3px]">
@@ -59,7 +60,8 @@ const DispatchServices = () => {
               </div>
                )
               })}
-            </div>
+            </div> */}
+            <Dropdown accardion={accardion}/>
           </div>
         </div>
      

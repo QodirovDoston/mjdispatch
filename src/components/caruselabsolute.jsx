@@ -53,18 +53,18 @@ const CaruselAbsolute = ({data}) => {
         {data?.map((item, index) => {
           return (
             <div className="relative">
-              <img src={item.src} alt={item.alt} className="object-cover max-h-[530px] w-full" />
+              <img src={item.src} alt={item.alt} className="object-cover xl:h-[530px] md:h-[580px] h-[690px] w-full" />
               <div
                 key={index}
                 className="text-center xl:px-48 md:px-28 px-4 absolute top-0 z-10"
               >
-                <h1 className="text-3xl font-extrabold lg:pt-12 pt-4 pb-7">
+                <h1 className="text-3xl font-extrabold lg:pt-12 pt-4 xl:pb-7 pb-1">
                   {item.title}
                 </h1>
-                <p className="xl:text-2xl text-xl font-sans py-4 text-text-color">
+                <p className="xl:text-2xl md:text-xl text-md font-sans py-4 text-text-color">
                   {item.paragrow}
                 </p>
-                <p className="text-2xl my-2 text-text-color">
+                <p className="text-2xl xl:my-2 my-0 text-text-color">
                   {item.discrabe}
                 </p>
               </div>

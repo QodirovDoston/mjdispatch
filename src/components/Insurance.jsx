@@ -28,7 +28,7 @@ const Insurance = () => {
               <h1 class="text-text-color text-2xl">
                 Getting Insured Has Never Been Easier
               </h1>
-              <p className="text-text-color text-md py-5 px-11">
+              <p className="text-text-color text-md py-5 xl:px-11 px-11">
                 Commercial truck insurance is a group of policies put together
                 to cover all your trucking needs. Before you can get your truck
                 on the road, FMCSA (trucking governing authority) requires you
@@ -40,7 +40,7 @@ const Insurance = () => {
             </div>
           </div>
           <div>
-            <div className="mt-1 py- xl:px-1 px-12">
+            <div className="mt-1 py-2 xl:px-1 px-2">
               <Image className="mx-auto my-12"
                 width={300}
                 height={300}
