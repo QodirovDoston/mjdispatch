@@ -151,18 +151,21 @@ const index = () => {
                       onMouseEnter={() => setActiveIndex(idx)}
                       onMouseLeave={() => setActiveIndex(null)}
                     >
-                      {item.dropDownData.map((dropItem, dropIdx) => (
+                      {item.dropDownData.map((dropItem, dropIdx) => {
+                      const isDropDownActive = router === dropItem.value;
+                      return (
                         <div>
                           <Link
                             key={dropIdx}
                             href={dropItem.value}
-                            className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"
+                            className={isDropDownActive ? "text-green-700 block px-4 py-4 text-sm hover:bg-gray-100" : "block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"}
                           >
                             {dropItem.text}
                           </Link>
                           <hr />
                         </div>
-                      ))}
+                        )
+                      })}
                     </div>
                   )}
                   {(item.name === "ABOUT US" || item.name === "SERVICES") && (
