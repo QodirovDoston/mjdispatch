@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import arrow_bottom from "../../assets/icons/arrow-bottom.svg";
@@ -126,53 +126,62 @@ const index = () => {
         <div className={toggle ? "block" : "hidden md:block"}>
           <ul className="md:flex block  md:justify-end justify-center flex-wrap xl:gap-20 gap-8 py-3">
             {links.map((item, idx) => {
-             const isActive = router === item.link || (item.dropDownData && item.dropDownData.some(d => d.value === router));
- (
-            <li
-                className="flex item-center justify-center hover:bg-gray-200 md:hover:bg-gray-100 md:py-0 py-2 md:border-none border md:border-white border-gray-200"
-                key={idx}
-                onMouseEnter={() => setActiveIndex(idx)}
-                onMouseLeave={() => setActiveIndex(null)}
-              >
-                <Link
-                href={item.link}
-                  // className={`${router.pathname === item} ? 'text-text-color bg-primary' : 'text-green-700'`}
-                  className={isActive ? "text-green-700" : "text-text-color font-bol"}
+              const isActive =
+                router === item.link ||
+                (item.dropDownData &&
+                  item.dropDownData.some((d) => d.value === router));
+              return (
+                <li
+                  className="flex item-center justify-center hover:bg-gray-200 md:hover:bg-gray-100 md:py-0 py-2 md:border-none border md:border-white border-gray-200"
+                  key={idx}
+                  onMouseEnter={() => setActiveIndex(idx)}
+                  onMouseLeave={() => setActiveIndex(null)}
                 >
-                  {item.name}
-                </Link>
-                {activeIndex === idx && item.dropDownData && (
-                  <div
-                    className="absolute bg-white shadow-md mt-6"
-                    onMouseEnter={() => setActiveIndex(idx)}
-                    onMouseLeave={() => setActiveIndex(null)}
+                  <Link
+                    href={item.link}
+                    // className={`${router.pathname === item} ? 'text-text-color bg-primary' : 'text-green-700'`}
+                    className={
+                      isActive ? "text-green-700" : "text-text-color font-bol"
+                    }
                   >
-                    {item.dropDownData.map((dropItem, dropIdx) => {
-                    //  const isActive = router.startsWith(dropItem.value);
-                      <div>
-                        <Link
-                          key={dropIdx}
-                          href={dropItem.value}
-                          className={isActive ? "text-red-300": "block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"}
-                        >
-                          {dropItem.text}
-                        </Link>
-                        <hr />
-                      </div>
-                    })}
-                  </div>
-                )}
-                {(item.name === "ABOUT US" || item.name === "SERVICES") && (
-                  <Image
-                    src={arrow_bottom}
-                    alt="arrow"
-                    width={20}
-                    height={20}
-                  />
-                )}
-            </li>
-            )
-          })}
+                    {item.name}
+                  </Link>
+                  {activeIndex === idx && item.dropDownData && (
+                    <div
+                      className="absolute bg-white shadow-md mt-6"
+                      onMouseEnter={() => setActiveIndex(idx)}
+                      onMouseLeave={() => setActiveIndex(null)}
+                    >
+                      {item.dropDownData.map((dropItem, dropIdx) => {
+                        //  const isActive = router.startsWith(dropItem.value);
+                        <div>
+                          <Link
+                            key={dropIdx}
+                            href={dropItem.value}
+                            className={
+                              isActive
+                                ? "text-red-300"
+                                : "block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"
+                            }
+                          >
+                            {dropItem.text}
+                          </Link>
+                          <hr />
+                        </div>;
+                      })}
+                    </div>
+                  )}
+                  {(item.name === "ABOUT US" || item.name === "SERVICES") && (
+                    <Image
+                      src={arrow_bottom}
+                      alt="arrow"
+                      width={20}
+                      height={20}
+                    />
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
