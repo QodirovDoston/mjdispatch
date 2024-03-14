@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const index = () => {
   const [toggle, setToggle] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  
   const router = usePathname();
 
   const links = [
@@ -158,12 +159,7 @@ const index = () => {
                           <Link
                             key={dropIdx}
                             href={dropItem.value}
-                            className={
-                              isActive
-                                ? "text-red-300"
-                                : "block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"
-                            }
-                          >
+                            className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100">
                             {dropItem.text}
                           </Link>
                           <hr />
