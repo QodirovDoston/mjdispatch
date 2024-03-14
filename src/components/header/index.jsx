@@ -1,22 +1,20 @@
-"use client";
+"use client"
 import Image from "next/image";
 import React, { useState } from "react";
 import arrow_bottom from "../../assets/icons/arrow-bottom.svg";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-// import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const index = () => {
   const [toggle, setToggle] = useState(false);
-  // console.log(window.innerWidth);
   const [activeIndex, setActiveIndex] = useState(null);
-  // const { id } = useParams();
-  const router = useRouter(); 
+  const router = usePathname();
+
   const links = [
     { name: "HOME", link: "/" },
     {
       name: "ABOUT US",
-      link: "/",
+      link: "/partners",
       dropDownData: [
         { text: "PARTNERS", value: "/partners" },
         { text: "TESTIMONIALS", value: "/testimonials" }
@@ -24,7 +22,7 @@ const index = () => {
     },
     {
       name: "SERVICES",
-      link: "/",
+      link: "/dispatch-services",
       dropDownData: [
         { text: "DISPATCH SERVICES", value: "/dispatch-services" },
         { text: "TRUCKS SERVICED", value: "/equipment-dispatch" },
@@ -40,6 +38,7 @@ const index = () => {
     { name: "BLOG", link: "/blog" },
     { name: "CONTACT", link: "/contact-us" }
   ];
+
   return (
     <div id="top" className="bg-gray-100 ">
       <div className="xl:w-[90%] w-[95%] mx-auto py-6">
@@ -53,10 +52,10 @@ const index = () => {
               src="https://mjdispatch.com/wp-content/uploads/2023/03/MJ-Logo-2x-400x1241-1.png"
             />
           </a>
-            {/* Ma'lumotlar sahifasi */}
+          {/* Ma'lumotlar sahifasi */}
           <div className="md:block hidden">
             <div className="flex justify-between flex-wrap items-center xl:gap-28 md:gap-2 gap-0">
-                   {/* Telefon raqami */}
+              {/* Telefon raqami */}
               <div className="">
                 <div className="px-3">
                   <a className="text-text-color font-hairline text-lg" href="">
@@ -83,7 +82,7 @@ const index = () => {
                   </a>
                 </div>
               </div>
-               {/* Qo'llab-quvvat */}
+              {/* Qo'llab-quvvat */}
               <div className="block">
                 <div className="mb-1 bg-primary xl:py-2 py-1 px-6 text-lg hover:bg-text-color duration-700 text-white rounded-2xl text-center">
                   <a className="" href="tel:18888347728">
@@ -97,7 +96,7 @@ const index = () => {
             </div>
             <hr class="h-[1px] my-1 bg-primary border-0" />
           </div>
-           {/* Burger tugmasi */}
+          {/* Burger tugmasi */}
           <button
             data-collapse-toggle="navbar-sticky"
             onClick={() => setToggle(!toggle)}
@@ -123,24 +122,22 @@ const index = () => {
             </svg>
           </button>
         </div>
-          {/* Navigation menyusi */}
+        {/* Navigation menyusi */}
         <div className={toggle ? "block" : "hidden md:block"}>
           <ul className="md:flex block  md:justify-end justify-center flex-wrap xl:gap-20 gap-8 py-3">
-            {links.map((item, idx) => (
-              <li
+            {links.map((item, idx) => {
+             const isActive = router === item.link || (item.dropDownData && item.dropDownData.some(d => d.value === router));
+ (
+            <li
                 className="flex item-center justify-center hover:bg-gray-200 md:hover:bg-gray-100 md:py-0 py-2 md:border-none border md:border-white border-gray-200"
                 key={idx}
                 onMouseEnter={() => setActiveIndex(idx)}
                 onMouseLeave={() => setActiveIndex(null)}
               >
                 <Link
-                  // className={`text-text-color hover:text-primary font-bold ${
-                  //   item.link === `/${id}` ? "active text-green-700" : ""
-                  // }`}
-                  className={`text-text-color hover:text-primary font-bold ${
-                    router.pathname === item.link ? "active text-green-700" : ""
-                  }`}
-                  href={item.link}
+                href={item.link}
+                  // className={`${router.pathname === item} ? 'text-text-color bg-primary' : 'text-green-700'`}
+                  className={isActive ? "text-green-700" : "text-text-color font-bol"}
                 >
                   {item.name}
                 </Link>
@@ -150,18 +147,19 @@ const index = () => {
                     onMouseEnter={() => setActiveIndex(idx)}
                     onMouseLeave={() => setActiveIndex(null)}
                   >
-                    {item.dropDownData.map((dropItem, dropIdx) => (
+                    {item.dropDownData.map((dropItem, dropIdx) => {
+                    //  const isActive = router.startsWith(dropItem.value);
                       <div>
                         <Link
                           key={dropIdx}
                           href={dropItem.value}
-                          className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"
+                          className={isActive ? "text-red-300": "block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"}
                         >
                           {dropItem.text}
                         </Link>
                         <hr />
                       </div>
-                    ))}
+                    })}
                   </div>
                 )}
                 {(item.name === "ABOUT US" || item.name === "SERVICES") && (
@@ -172,8 +170,9 @@ const index = () => {
                     height={20}
                   />
                 )}
-              </li>
-            ))}
+            </li>
+            )
+          })}
           </ul>
         </div>
       </div>
