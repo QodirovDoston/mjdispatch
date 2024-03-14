@@ -8,9 +8,7 @@ import { usePathname } from "next/navigation";
 const index = () => {
   const [toggle, setToggle] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
-  
   const router = usePathname();
-
   const links = [
     { name: "HOME", link: "/" },
     {
@@ -39,7 +37,6 @@ const index = () => {
     { name: "BLOG", link: "/blog" },
     { name: "CONTACT", link: "/contact-us" }
   ];
-
   return (
     <div id="top" className="bg-gray-100 ">
       <div className="xl:w-[90%] w-[95%] mx-auto py-6">
@@ -53,6 +50,7 @@ const index = () => {
               src="https://mjdispatch.com/wp-content/uploads/2023/03/MJ-Logo-2x-400x1241-1.png"
             />
           </a>
+
           {/* Ma'lumotlar sahifasi */}
           <div className="md:block hidden">
             <div className="flex justify-between flex-wrap items-center xl:gap-28 md:gap-2 gap-0">
@@ -127,11 +125,9 @@ const index = () => {
         <div className={toggle ? "block" : "hidden md:block"}>
           <ul className="md:flex block  md:justify-end justify-center flex-wrap xl:gap-20 gap-8 py-3">
             {links.map((item, idx) => {
-              const isActive =
-                router === item.link ||
-                (item.dropDownData &&
+                const isActive = router === item.link || (item.dropDownData &&
                   item.dropDownData.some((d) => d.value === router));
-              return (
+                  return(
                 <li
                   className="flex item-center justify-center hover:bg-gray-200 md:hover:bg-gray-100 md:py-0 py-2 md:border-none border md:border-white border-gray-200"
                   key={idx}
@@ -139,32 +135,34 @@ const index = () => {
                   onMouseLeave={() => setActiveIndex(null)}
                 >
                   <Link
-                    href={item.link}
-                    // className={`${router.pathname === item} ? 'text-text-color bg-primary' : 'text-green-700'`}
                     className={
-                      isActive ? "text-green-700" : "text-text-color font-bold"
+                      isActive
+                        ? "text-green-700 font-bold"
+                        : "text-text-color font-bold"
                     }
+                    href={item.link}
                   >
                     {item.name}
                   </Link>
                   {activeIndex === idx && item.dropDownData && (
+
                     <div
                       className="absolute bg-white shadow-md mt-6"
                       onMouseEnter={() => setActiveIndex(idx)}
                       onMouseLeave={() => setActiveIndex(null)}
                     >
-                      {item.dropDownData.map((dropItem, dropIdx) => {
-                        //  const isActive = router.startsWith(dropItem.value);
+                      {item.dropDownData.map((dropItem, dropIdx) => (
                         <div>
                           <Link
                             key={dropIdx}
                             href={dropItem.value}
-                            className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100">
+                            className="block px-4 py-4 text-sm text-gray-700 hover:bg-gray-100"
+                          >
                             {dropItem.text}
                           </Link>
                           <hr />
-                        </div>;
-                      })}
+                        </div>
+                      ))}
                     </div>
                   )}
                   {(item.name === "ABOUT US" || item.name === "SERVICES") && (
@@ -176,8 +174,8 @@ const index = () => {
                     />
                   )}
                 </li>
-              );
-            })}
+              )
+                  })}
           </ul>
         </div>
       </div>
