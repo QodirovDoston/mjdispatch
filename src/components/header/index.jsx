@@ -141,7 +141,7 @@ const index = () => {
                     href={item.link}
                     // className={`${router.pathname === item} ? 'text-text-color bg-primary' : 'text-green-700'`}
                     className={
-                      isActive ? "text-green-700" : "text-text-color font-bol"
+                      isActive ? "text-green-700" : "text-text-color font-bold"
                     }
                   >
                     {item.name}
