@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import locationIcon from "../../assets/icons/location.svg";
+import arrowUp from "../../assets/icons/arrowUp.svg";
+
 import phoneIcon from "../../assets/icons/phone.svg";
 import emailIcon from "../../assets/icons/email.svg";
 
@@ -91,7 +93,7 @@ const index = () => {
             width={25}
             height={25}
             alt="hero"
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20240227155250/up.png"
+            src={arrowUp}
             className="w-12 h-12 rounded-full bg-white"
           />
         </a>
